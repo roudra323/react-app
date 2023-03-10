@@ -80,8 +80,14 @@ const navBar = (
 // Afterward, render it below the Navbar (which
 // you can do inside the ReactDOM.render call below)
 
-function MainContent() {
-  return <h1>"I'm learning React!"</h1>;
-}
+const MainContent = <h1>"I'm learning React!"</h1>;
 
-ReactDOM.render(navBar, document.getElementById("root"));
+const App = (
+  <div>
+    {navBar}
+    {MainContent}
+  </div>
+);
+
+ReactDOM.render(App, document.getElementById("root"));
+// ReactDOM.render(MainContent, document.getElementById("root"));
